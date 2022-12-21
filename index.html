@@ -5,29 +5,33 @@
   <meta charset="UTF-8">
   <title>Challenge Oracle One - Decodificador de texto</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
 </head>
 
 <body>
   <header class="cabecalho">
     <img src="img/logo.png" alt="logo alura">
   </header>
+
   <main class="corpo">
-    <div class="input">
+    
+    <div class="input-texto">
       <textarea id="input-texto" wrap="hard" placeholder="Digite seu texto"></textarea>
     </div>
-    <div id="output">
+   
+    <div id="saida-texto">
       <img src="img/img_look.png" alt="Imagem img_look">
       <h2>Nenhuma mensagem encontrada</h2>
       <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
     </div>
 
     <div class="botoes">
-      <img src="img/atencao.png" alt="" id="Atenção">
+      <img src="img/atencao.png" alt="" id="Atencao">
       <p id="letra">Apenas letras minúsculas e sem acento.</p>
       <br>
-      <div class="container-btn">
-        <button onclick="criptografar()" class="btn-criptografar">Criptografar</button>
-        <button onclick="descriptografar()" class="btn-descriptografar">Descriptografar</button>
+      <div class="espacoBotao">
+        <button onclick="criptografar()" class="botaoCriptografar">Criptografar</button>
+        <button onclick="descriptografar()" class="botaoDescriptografar">Descriptografar</button>
       </div>
     </div>
   </main>
