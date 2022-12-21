@@ -3,7 +3,7 @@ var outInput = document.querySelector("#saida-texto");
 
 function criptografar() {
     
-    var texto = textInput.value;
+  var texto = textInput.value;
   
     //Divide texto em array de strings com 18 caracteres cada
     var resultadoCriptografia = texto.match(/.{1,18}/g);
@@ -15,8 +15,8 @@ function criptografar() {
     resultadoCriptografia = resultadoCriptografia.replace(/a/g, "@").replace(/b/g , "&").replace(/c/g , "¢").replace(/e/g , "#");
   
     //Atualiza o conteúdo da textarea com o resultado
-    document.getElementById('output').innerHTML = '<textarea readonly id="input-texto">' + resultadoCriptografia + 
-    '</textarea>' + '<button class="botaoCopiar" id="copiar" onclick="copiar()">Copiar</button>';
+    document.getElementById('saida-texto').innerHTML = '<textarea readonly id="input-texto">' + resultadoCriptografia + 
+    '</textarea>' + '<button class="botaoCriptografar" id="copiar" onclick="copiar()">Copiar</button>';
   }
   
   function descriptografar() {
@@ -27,8 +27,8 @@ function criptografar() {
     resultadoDescriptografia = resultadoDescriptografia.join("\n");
     resultadoDescriptografia = resultadoDescriptografia.replace(/@/g, "a").replace(/&/g , "b").replace(/¢/g , "c").replace(/#/g , "e");
   
-    document.getElementById('output').innerHTML = '<textarea readonly id="input-texto">' + resultadoDescriptografia + 
-    '</textarea>' + '<button class="botaoCopiar" id="copiar" onclick="copiar()">Copiar</button>';
+    document.getElementById('saida-texto').innerHTML = '<textarea readonly id="input-texto">' + resultadoDescriptografia + 
+    '</textarea>' + '<button class="botaoDescriptografar" id="copiar" onclick="copiar()">Copiar</button>';
   }
   
 function copiar(){
