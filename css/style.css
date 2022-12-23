@@ -1,177 +1,350 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 body {
-    background-color: #E5E5E5;
+    background-color:#F3F5FC;
+    position: relative;
+    height: 100vh;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Rubik', sans-serif;
+.logo{
+    position: absolute;
+    top: 40px;
+    left: 84px;
+    width: 31px;
+    height: 48px ;
 }
 
-.cabecalho {
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-}
-
-.cabecalho h2 {
-    color: #0A3871;
-}
-
-.cabecalho img {
-    max-width: 70px;
-    max-height: 70px;
-    width: auto;
-    height: auto;
-}
-
-.corpo {
-    display: flex;
-    justify-content: space-between;
-    padding: 2% 0 0 4%;
-}
-
-.corpo .input-texto {
-    width: 400px;
-    height: 330px;
-}
-
-#input-texto {
-    overflow-wrap: break-word;
+.texto-encriptado {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #0a3871;
+    resize: none;
     width: 600px;
-    height: 330px;
-    font-size: 22px;
-    color: #0A3871;
-    background: transparent;
-    box-shadow: none;
+    height: 300px;
+    margin-left: 240px;
+    margin-top: 168px;
+    background-color: #F3F5FC;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     border: none;
-    outline: 0;
-    padding: 10px;
-    text-transform: uppercase;
 }
 
-#saida {
+.texto-encriptado::-webkit-scrollbar {
+    display: none;
+}
+
+.texto-encriptado::placeholder {
+    color: #0a3871;
+}
+
+.texto-encriptado:focus {
+    outline: none;
+}
+
+.box {
+    position: absolute;
     display: flex;
-    flex-direction: column;
-    border: 3px solid #0A3871;
-    background: #FFFFFF;
-    border-radius: 20px;
-    width: 350px;
-    height: 500px;
-    margin-left: 3%;
-    margin-right: 2%;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
+    top: 40px;
+    right: 40px;
+    background-color: #FFF;
+    width: 400px;
+    height: 90vh;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
 
-#saida h2 {
-    text-align: center;
-    font-size: 25px;
-    color: #0A3871;
+.box-conteudo {
+    width: 100%;
+    margin: auto 32px auto 32px;
 }
 
-#saida span {
+.box-design {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.box-mensagem {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    line-height: 28.8px;
+    margin-bottom: 16px;
+}
+
+.box-aviso {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     text-align: center;
+    line-height: 24px;
 }
 
-#saida img {
-    max-width: 300px;
-    max-width: 300px;
-    width: auto;
-    height: auto;
-    margin-top: 4%;
+.caixa-botao {
+    width: 680px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-#atencao {
-    height: 15px;
-    margin-left: 6%;
-    margin-bottom: -1.5%;
+.botao-criptografar {
+    font-family: 'Inter', sans-serif;
+    line-height: 19.36px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    width: 280px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    margin: 12px;
+    cursor: pointer;
 }
 
-#texto {
-    width: 228px;
-    height: 18px;
-    margin-right: 2%;
-    margin-left: 8%;
-    font-family: 'Inter';
-    font-style: normal;
+.botao-criptografar:hover {
+    background-color: #092e5c;
+}
+
+.botao-criptografar:active{
+    box-shadow: inset 4px 4px 12px #121131,
+                inset -4px -4px 12px #1b1a4d;
+}
+
+.botao-decriptografar {
+    font-family: 'Inter', sans-serif;
+    line-height: 19.36px;
+    text-align: center;
+    font-size: 16px;
+    color: #0A3871;
+    width: 280px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #F3F5FC;
+    border: 1px solid #0A3871;
+    margin: 12px;
+    cursor: pointer;
+}
+
+.botao-decriptografar:hover {
+    background-color: #e0e2e6;
+}
+
+.botao-decriptografar:active {
+    box-shadow: inset 4px 4px 12px #7c7e80,
+                inset -4px -4px 12px #949596;
+}
+
+.aviso {
+    position: relative;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
+    width: 230px;
     color: #495057;
-    opacity: 0.8;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    margin-left: 36px;
+    margin-bottom: 4px;
 }
 
-.botaoCriptografar{
-    border: 2px solid var(#0A3871);
-    border-radius: 10px;
-    text-decoration: none;
-    background: var(#0A3871);
-    color: #ffffff;
-    width: 150px;
-    height: 50px;
-    margin-left: 4%;
-    cursor: pointer;
-}
-
-.botaoDescriptografar{
-    border: 2px solid var(#0A3871);
-    border-radius: 10px;
-    text-decoration: none;
-    background: #D8DFE8;
-    color: #0A3871;
-    width: 150px;
-    height: 50px;
-    margin-left: 4%;
-    cursor: pointer;
-}
-
-
-.btn-copiar{
-    border: 2px solid var(#0A3871);
-    border-radius: 10px;
-    text-decoration: none;
-    color: #0A3871;
-    width: 150px;
-    height: 50px;
-    margin-bottom: 10%;
-    margin-left: 30%;
-    cursor: pointer;
-}
-
-.btn-copiar:hover{
-    border: 2px solid var(#E5E5E5);
-    transition:  0.5s all;
-}
-
-.btn-criptografar:hover{
-    border: 2px solid var(#0A3871);
-    transition:  0.5s all;
-    background: #D8DFE8;
-    color: #0A3871;
-}
-
-.btn-descriptografar:hover{
-    border: 2px solid var(#E5E5E5);
-    transition:  0.5s all;
-    background: var(#0A3871);
-    color: #ffffff;
-}
-
-
-footer {
-    text-align: center;
-    padding: 40px 0;
+.aviso::before {
+    position: absolute;
+    content: '';
+    background-image: url('./images/aviso.png');
+    width: 16px;
+    height: 16px;
+    top: 1px;
+    left: -24px;
 }
 
 .copyright {
-    color: black;
-    font-size: 13px;
-    margin: 20px 0 0;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    color: #0a3871;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+.box-copiar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px;
+}
+
+.caixa-copiar {
+    height: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.caixa-copiar::-webkit-scrollbar {
+    display: none;
+}
+
+.copy {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+
+.botao-copiar {
+    font-family: 'Inter', sans-serif;
+    line-height: 19.36px;
+    text-align: center;
+    font-size: 16px;
+    color: #0A3871;
+    width: 336px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #F3F5FC;
+    border: 1px solid #0A3871;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.botao-copiar:hover {
+    background-color: #e0e2e6;
+}
+
+.botao-copiar:active {
+    box-shadow: inset 4px 4px 12px #7c7e80,
+                inset -4px -4px 12px #949596;
+}
+
+.caixa-encriptada {
+    position: relative;
+    max-width: 680px;
+    left: 240px;
+}
+
+@media screen and (max-width: 1290px) {
+    .texto-encriptado {
+        margin-left: 70px;
+        width: 590px;
+    }
+
+    .caixa-encriptada {
+        left: 70px;
+    }
+
+    .box {
+        width: 300px;
+    }
+
+    .botao-copiar {
+        width: 236px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .texto-encriptado {
+        order: 2;
+        font-size: 28px;
+        text-align: center;
+        margin-left: 0;
+        min-height: 290px;
+        height: auto;
+    }
+
+    .caixa-encriptada {
+        order: 3;
+        left: 0;
+        max-width: none;
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .caixa-botao {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .botao-criptografar {
+        width: calc(50% - 2.64%);
+    }
+
+    .botao-decriptografar {
+        width: calc(50% - 2.64%);
+    }
+
+    .box {
+        position: relative;
+        order: 4;
+        width: 80%;
+        top: 0;
+        right: 0;
+        margin-top: 64px;
+        padding: 30px;
+        height: auto;
+    }
+
+    .box-design {
+        display: none;
+    }
+
+    .copyright {
+        display: flex;
+    
+    }
+
+    .box-copiar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .caixa-copiar {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+
+    .caixa-copiar .copy {
+        font-size: 20px;
+    }
+
+    .botao-copiar {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .texto-encriptado {
+        width: 80%;
+    }
+
+    .caixa-botao {
+        flex-wrap: wrap;
+    }
+
+    .botao-criptografar {
+        width: 100%;
+    }
+
+    .botao-decriptografar {
+        width: 100%;
+    }
+
+    .botao-copiar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .aviso {
+        width: auto;
+    }
+} 
